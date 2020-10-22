@@ -6,10 +6,14 @@ def clicker():
 
     pyautogui.moveTo(140, 450)
     target = pyautogui.position()
+    coordGoldCookie = pyautogui.locateCenterOnScreen("goldCookie.png", grayscale=False)
     
+
     while target==(140,450):
         target = pyautogui.position()
         pyautogui.click()
+        
+        
         if pyautogui.pixelMatchesColor(670, 630, (255, 255, 255)):
             pyautogui.click(670, 630)
         elif pyautogui.pixelMatchesColor(700, 680, (175, 176, 170)):
